@@ -34,6 +34,10 @@
     --shadow-md: 0 8x 24x rgba(15, 23, 42, 0.06);
     --shadow-lg: 0 16x 36x rgba(79, 70, 229, 0.12);
 
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 28px;
+
 }
 
 * {
@@ -46,6 +50,8 @@ html {
     background-color: var(--bg-main);
     color: var(--text-primary);
     font-family: 'Helvetica Neue', apple-system, BlinkSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -66,6 +72,68 @@ section {
     padding: 0 24px;
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 250, 241, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 0.95ren;
+    transition: color 0.25s easy;
+    padding: 4px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: var(--radius-lg);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 #home div {
     display: flex;
     flex-direction: column;
@@ -84,14 +152,6 @@ h1 {
     line-height: 1.15;
 }
 
-h2 {
-    font-size: 2.1rem;
-    font-weight: 900;
-    color: var(--text-primary);
-    letter-spacing: -0.03em;
-    margin-bottom: 8px;
-}
-
 h3 {
     font-size: 1.35rem;
     font-weight: 800;
@@ -107,9 +167,16 @@ h3 {
     letter-spacing: -0.01em;
 }
 
-#about p {
+.section-title {
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
     font-size: 1.1rem;
-    font-weight: 700;
     color: var(--text-secondary);
     margin-bottom: 36px;
 }
@@ -118,6 +185,26 @@ h3 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid #f1f5f9;
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 16px;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
 }
 
 .projects-list {
@@ -131,11 +218,13 @@ h3 {
     flex-direction: column;
     padding: 28px;
     border: 2px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .project:hover {
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
@@ -164,15 +253,15 @@ h3 {
     border-color: var(--card-blue-hover);
 }
 
-#project1:hover h2 {
+#project1 h2 {
     color: var(--card-blue-text);
 }
 
-#project1:hover p {
+#project1 p {
     color: var(--card-blue-sub);
 }
 
-#project1:hover a {
+#project1 a {
     color: var(--card-blue-text);
 }
 
@@ -185,15 +274,15 @@ h3 {
     border-color: var(--card-green-hover);
 }
 
-#project2:hover h2 {
+#project2 h2 {
     color: var(--card-green-text);
 }
 
-#project2:hover p {
+#project2 p {
     color: var(--card-green-sub);
 }
 
-#project2:hover a {
+#project2 a {
     color: var(--card-green-text);
 }
 
@@ -206,14 +295,14 @@ h3 {
     border-color: var(--card-yellow-hover);
 }
 
-#project3:hover h2 {
+#project3 h2 {
     color: var(--card-yellow-text);
 }
 
-#project3:hover p {
+#project3 p {
     color: var(--card-yellow-sub);
 }
 
-#project3:hover a {
+#project3 a {
     color: var(--card-yellow-text);
 }

@@ -6,22 +6,43 @@
 </head>
 
 <body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects & Art</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
     <section id="home">
         <div class="container">
             <img src="./img/avatar.png" class="avatar">
             <h1>Hi, I'm Kira! 👋</h1>
             <p>I love creating fine art and coding web apps and games.</p>
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
         </div>
     </section>
     <section id="about">
         <div class="container">
-            <h2>About me</h2>
-            <p>A little bit about who I am, what I create, and what inspires me.</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">A little bit about who I am, what I create, and what inspires me.</p>
+            <div class="card">
+                <p>Hi there! I'm Kira and I love bridging visual arts with code - from traditional painting and drawing
+                    to building interactive web experiments and productivity tools.</p>
+                <p>Whether working with acrylics and watercolors on canvas or writing JavaScript, HTML, and CSS. I enjoy
+                    bringing fresh ideas to life. Check out my GitHub repositories below to see my ongoing projects!</p>
+            </div>
         </div>
     </section>
     <section id="projects">
         <div class="container">
-            <h2>My projects</h2>
+            <h2 class="section-title">Featured Projects & Art</h2>
+            <p class="section-subtitle">Highlights from my GitHub repositories and artwork.</p>
             <div class="projects-list" id="projectslist">
                 <div class="project" id="project1">
                     <h3>Art portfolio</h3>
@@ -47,14 +68,21 @@
     </section>
     <section id="contact">
         <div class="container">
-            <h2>Connect</h2>
-            <p>Check out my open-source projects on GitHub.</p>
-            <a href="https://github.com/kira-iovenko/" target="_blank">@kira-iovenko</a>
+            <h2 class="section-title">Connect & Follow</h2>
+            <p class="section-subtitle">Check out my repositories on GitHub.</p>
+            <div class="card">
+                <p>Interested in collaborating or browsing my coding projects? Feel free to visit my GitHub profile or
+                    send a message:
+                    <a href="https://github.com/kira-iovenko/" target="_blank">@kira-iovenko</a>
+                </p>
+            </div>
         </div>
     </section>
-    <div id="footer">
-        <p>&copy; 2026 Kira Iovenko. All rights reserved.</p>
-    </div>
+    <section id="footer">
+        <div class="container">
+            <p>&copy; 2026 Kira Iovenko. All rights reserved.</p>
+        </div>
+    </section>
 
 </body>
 
