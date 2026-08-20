@@ -1,25 +1,116 @@
-#home {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #FFFAF1;
+    color: #0f172a;
+    font-family: 'Helvetica Neue', apple-system, BlinkSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    padding: 72px 0;
+    border-bottom: 1px solid #f1e9db;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+#home div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.05em;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;;
+}
+
+#home p {
+    font-size: 1.25rem;
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+#about p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 36px;
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
 .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 22px;
 }
 
 .project {
-    padding: 10px;
-    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    border: 1px solid #f1e9db;
     border-radius: 10px;
 }
 
+.project p {
+    font-size: 1rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 22px;
+}
+
+.project a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.project a:hover {
+    gap: 8px;
+}
