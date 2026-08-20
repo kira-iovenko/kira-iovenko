@@ -4,6 +4,9 @@ Welcome to my personal portfolio website! 👋
 
 This site showcases my work across web deelopment, creative coding, and fine art. I enjoy combining technology and visual creativity to turn ideas into interactive projects.
 
+<img width="1277" height="668" alt="image" src="https://github.com/user-attachments/assets/3923770c-faec-4e2c-9a74-9263ad245a43" />
+
+
 ## Visit website
 https://kira-iovenko.github.io/
 
