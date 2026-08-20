@@ -1,3 +1,41 @@
+:root {
+    --bg-main: #fffaf1;
+    --bg-card: #ffffff;
+    --bg-accent: #eef2ff;
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --accent-color: #06bcd4;
+    --border-color: #f1e9db;
+
+    --card-blue-bg: #dbeafe;
+    --card-blue-border: #bfdbfe;
+    --card-blue-hover: #60a5fa;
+    --card-blue-text: #1e3a8a;
+    --card-blue-sub: #1d4ed8;
+
+    --card-green-bg: #d1fae5;
+    --card-green-border: #a7f3d0;
+    --card-green-hover: #34d399;
+    --card-green-text: #064e3b;
+    --card-green-sub: #047857;
+
+    --card-yellow-bg: #fef37c;
+    --card-yellow-border: #fde68a;
+    --card-yellow-hover: #f59e0b;
+    --card-yellow-text: #78350f;
+    --card-yellow-sub: #b45309;
+
+    --shadow-sm: 0 2x 4x rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8x 24x rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 16x 36x rgba(79, 70, 229, 0.12);
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +43,8 @@
 }
 
 html {
-    background-color: #FFFAF1;
-    color: #0f172a;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     font-family: 'Helvetica Neue', apple-system, BlinkSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
@@ -18,7 +56,7 @@ body {
 
 section {
     padding: 72px 0;
-    border-bottom: 1px solid #f1e9db;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .container {
@@ -41,7 +79,7 @@ section {
 h1 {
     font-size: 3rem;
     font-weight: 900;
-    color: #0f172a;
+    color: var(--text-primary);
     letter-spacing: -0.05em;
     line-height: 1.15;
 }
@@ -49,7 +87,7 @@ h1 {
 h2 {
     font-size: 2.1rem;
     font-weight: 900;
-    color: #0f172a;
+    color: var(--text-primary);
     letter-spacing: -0.03em;
     margin-bottom: 8px;
 }
@@ -58,12 +96,13 @@ h3 {
     font-size: 1.35rem;
     font-weight: 800;
     margin-bottom: 10px;
-    letter-spacing: -0.02em;;
+    letter-spacing: -0.02em;
+    ;
 }
 
 #home p {
     font-size: 1.25rem;
-    color: #0f172a;
+    color: var(--text-primary);
     font-weight: 700;
     letter-spacing: -0.01em;
 }
@@ -71,7 +110,7 @@ h3 {
 #about p {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #475569;
+    color: var(--text-secondary);
     margin-bottom: 36px;
 }
 
@@ -91,8 +130,13 @@ h3 {
     display: flex;
     flex-direction: column;
     padding: 28px;
-    border: 1px solid #f1e9db;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.project:hover {
+    box-shadow: var(--shadow-md);
 }
 
 .project p {
@@ -111,6 +155,65 @@ h3 {
     gap: 4px;
 }
 
-.project a:hover {
-    gap: 8px;
+#project1 {
+    background-color: var(--card-blue-bg);
+    border-color: var(--card-blue-border);
+}
+
+#project1:hover {
+    border-color: var(--card-blue-hover);
+}
+
+#project1:hover h2 {
+    color: var(--card-blue-text);
+}
+
+#project1:hover p {
+    color: var(--card-blue-sub);
+}
+
+#project1:hover a {
+    color: var(--card-blue-text);
+}
+
+#project2 {
+    background-color: var(--card-green-bg);
+    border-color: var(--card-green-border);
+}
+
+#project2:hover {
+    border-color: var(--card-green-hover);
+}
+
+#project2:hover h2 {
+    color: var(--card-green-text);
+}
+
+#project2:hover p {
+    color: var(--card-green-sub);
+}
+
+#project2:hover a {
+    color: var(--card-green-text);
+}
+
+#project3 {
+    background-color: var(--card-yellow-bg);
+    border-color: var(--card-yellow-border);
+}
+
+#project3:hover {
+    border-color: var(--card-yellow-hover);
+}
+
+#project3:hover h2 {
+    color: var(--card-yellow-text);
+}
+
+#project3:hover p {
+    color: var(--card-yellow-sub);
+}
+
+#project3:hover a {
+    color: var(--card-yellow-text);
 }
